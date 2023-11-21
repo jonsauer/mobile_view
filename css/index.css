@@ -9,6 +9,16 @@ h1 {
     
     
 }
+img:hover{
+    border-color: black;
+    padding: 0px;
+
+}
+video:hover{
+    border-color: black;
+    padding: 0px;
+
+}
 nav li:hover {
     background-color: brown;
     color: white;
@@ -134,16 +144,27 @@ figcaption{
     font-style: italic;
     text-align: center;
 }
+.non-movemnet {
+    display: none;
+}
 @media (prefers-reduced-motion: reduce) {
     .gif {
-        display: none;
-    }
-    img {
         display: none;
     }
     video {
         display: none;
     }
+    .movement {
+        display: none;
+    }
+    .non-movemnet {
+        display: block;
+    }
+    h1 {
+        animation: none;
+    }
+    
+    
     
     
     
@@ -166,7 +187,7 @@ figcaption{
     to {color: white;}
   }
 
-  @media only screen and (min-width: 700px) {
+  @media only screen and (max-width: 950px) {
 
     h1 {
         font-size: 90px;
@@ -216,7 +237,7 @@ figcaption{
     }
     .item-2 {
         grid-column: 2/2;
-        grid-row: 1/1;
+        grid-row: 1/2;
         border: solid;
         border-color: brown;
         border-width: 5px;
@@ -229,7 +250,7 @@ figcaption{
     }
     .item-3 {
         grid-column: 1/2;
-        grid-row:2/2;
+        grid-row: 2/2;
         border: solid;
         border-color: brown;
         border-width: 5px;
@@ -253,31 +274,74 @@ figcaption{
         margin:auto;
         padding: 5px;
     }
-    #scroll-to-top {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s ease;
-      }
-      
-      #scroll-to-top a {
-        display: block;
-        width: 40px;
-        height: 40px;
-        background-color: #007BFF;
-        color: #fff;
-        text-align: center;
-        line-height: 40px;
-        font-size: 24px;
-        text-decoration: none;
-        border-radius: 50%;
-        cursor: pointer;
-      }
-      
-
-
-      
 }
+    
+      
+
+
+      
+
+@media only screen and (min-width: 951px) {
+    .skip {
+        margin-left: -160px;
+    }
+    .skip:focus {
+        margin-left: 0px;
+    }
+    nav  {
+        background-image: url('../images/sky.jpg');
+        background-size: cover;
+        
+    }
+    h1 {
+        font-family: 'Anton';
+    }
+    h2 {
+        font-family: 'Anton';
+    }
+    h3 {
+        font-family: 'Anton';
+    }
+    .grid-container-picture {
+        display:grid;
+        grid-template-columns: repeat(4, 1fr);
+        border: dashed;
+        border-width: 4px;
+        border-color: brown;
+        gap: 10px;
+        margin: 5px;
+        justify-content: center;
+        
+        
+        
+    
+    }
+    
+    
+    
+}
+#scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+  }
+  
+  #scroll-to-top a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    font-size: 24px;
+    text-decoration: none;
+    border-radius: 50%;
+    cursor: pointer;
+    
+  }
+
 
